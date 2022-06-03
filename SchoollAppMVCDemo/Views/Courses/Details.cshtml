@@ -1,0 +1,19 @@
+﻿@model SchoollAppMVCDemo.Models.Course
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@Html.ActionLink("<< Back to Index ", "Index")
+<h2>@Model.Name</h2>
+
+@{ 
+    string display = "The students of " + Model.Name + " are: ";
+    foreach(var student in Model.Students)
+    {
+        display += student.FullName + " ";
+    }
+
+    <span>@display</span>
+}

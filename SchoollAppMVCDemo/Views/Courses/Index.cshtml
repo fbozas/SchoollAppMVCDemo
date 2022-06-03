@@ -1,0 +1,28 @@
+﻿
+@model IEnumerable<SchoollAppMVCDemo.Models.Course>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Courses</h2>
+
+@if(TempData["ErrorMessage"] != null)
+{
+    <span>@TempData["ErrorMessage"]</span>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var course in Model)
+        {
+            <tr>
+                <td>@course.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
