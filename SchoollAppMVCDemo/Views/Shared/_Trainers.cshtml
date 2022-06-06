@@ -1,0 +1,11 @@
+﻿@model List<SchoollAppMVCDemo.Models.Trainer>
+
+@{ 
+    string display = "";
+    foreach(var trainer in Model)
+    {
+        display += trainer.FullName + " ";
+    }
+
+    <span>@display</span>
+}
