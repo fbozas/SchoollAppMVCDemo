@@ -21,7 +21,9 @@
         @foreach(var course in Model)
         {
             <tr>
-                <td>@course.Name</td>
+                <td>
+                    @Html.ActionLink(course.Name, "Details", new { id = course.ID})
+                </td>
             </tr>
         }
     </tbody>
